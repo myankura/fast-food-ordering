@@ -5,7 +5,7 @@ const restaurant = {
         this.orders.push(meal);
     },
     getOrders: function () {
-        this.orders.values;
+        return this.orders;
     }
 }
 const chickenComboMeal = {
@@ -29,9 +29,11 @@ const fishComboMeal = {
     drinkSize: "Large"
 }
 // Place an order
-restaurant.placeOrder();
+restaurant.placeOrder(fishComboMeal);
+restaurant.placeOrder(cheeseBurgerComboMeal);
+restaurant.placeOrder(veganComboMeal);
+restaurant.placeOrder(chickenComboMeal);
 
 // Invoke the function to return the list of all orders
-restaurant.getOrders();
 // Output all orders to the console using console.table()
-console.table(orders);
+console.table(restaurant.getOrders());
